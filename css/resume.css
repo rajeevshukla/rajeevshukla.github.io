@@ -174,3 +174,34 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+
+* {
+	box-sizing: border-box;
+}
+
+.progress {
+	background-color: #d8d8d8;
+	border-radius: 20px;
+	position: relative;
+	margin: 6px 0;
+	height: 10px;
+	width: 100px;
+}
+
+.progress-done {
+	background: linear-gradient(to left, #BD5D38, #FF9472);
+	box-shadow: 0 3px 3px -5px #BD5D38, 0 2px 5px #F2709C;
+	border-radius: 30px;
+	color: #d5d5d5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 0;
+	opacity: 0;
+  transition: 1s ease 0.3s;
+  animation-duration: .7s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}

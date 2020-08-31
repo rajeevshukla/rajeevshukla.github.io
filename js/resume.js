@@ -25,4 +25,10 @@
     target: '#sideNav'
   });
 
+  const progress = document.querySelector('.progress-done');
+
+  $(".progress-done").each(function(){
+    $(this).css("opacity","1")
+    $(this).css("width",$(this).data('done')+'%');
+  });
 })(jQuery); // End of use strict
