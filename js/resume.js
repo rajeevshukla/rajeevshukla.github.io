@@ -31,4 +31,15 @@
     $(this).css("opacity","1")
     $(this).css("width",$(this).data('done')+'%');
   });
+
+
+  var docHeight = $(document).height(),
+  scrollPercent;
+
+  $(window).scroll(function() {
+    scrollPercent = ($(window).scrollTop() / docHeight) * 100;
+
+    $('.scroll-progress').width(scrollPercent + '%');
+    });
+
 })(jQuery); // End of use strict

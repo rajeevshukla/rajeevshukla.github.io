@@ -205,3 +205,22 @@ a:hover, a:focus, a:active {
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
+
+
+
+
+
+.scroll-progress-container {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  position: fixed;
+}
+
+
+
+.scroll-progress {
+  width: 0px;
+  height: 5px;
+  background-color:#BD5D38;
+}
