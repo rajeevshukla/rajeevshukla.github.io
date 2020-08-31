@@ -201,9 +201,10 @@ a:hover, a:focus, a:active {
 	width: 0;
 	opacity: 0;
   transition: 1s ease 0.3s;
-  animation-duration: .7s;
-  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  animation-delay: 3s;
 }
 
 
