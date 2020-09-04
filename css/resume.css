@@ -7,6 +7,11 @@
 body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
+
+  animation: fadeInAnimation ease 5s ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; 
+  overflow-x: hidden;
 }
 
 @media (min-width: 992px) {
@@ -234,3 +239,14 @@ a:hover, a:focus, a:active {
   vertical-align: baseline;
   background: transparent;
 }
+
+
+
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+   } 
+} 
