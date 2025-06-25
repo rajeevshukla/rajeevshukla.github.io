@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar Test</title>
+    <link href="css/resume.css" rel="stylesheet">
+    <script src="vendor/jquery/jquery.min.js"></script>
+</head>
+<body style="padding: 50px;">
+    <h2>Progress Bar Test</h2>
+    
+    <!-- Test the scroll progress bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress"></div>
+    </div>
+    
+    <!-- Test skill progress bars -->
+    <div style="margin-top: 100px;">
+        <h3>Skills Test</h3>
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <div class="float-left" style="width: 49%; height: 20px;">Core Java</div>
+                    <div class="progress float-right">
+                        <div class="progress-done" data-done="90"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="float-left" style="width: 49%; height: 20px;">Spring Boot</div>
+                    <div class="progress float-right">
+                        <div class="progress-done" data-done="85"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="float-left" style="width: 49%; height: 20px;">JavaScript</div>
+                    <div class="progress float-right">
+                        <div class="progress-done" data-done="75"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="float-left" style="width: 49%; height: 20px;">Docker</div>
+                    <div class="progress float-right">
+                        <div class="progress-done" data-done="70"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <!-- Add some content to test scroll -->
+    <div style="height: 1500px; margin-top: 100px;">
+        <p>Scroll down to test the scroll progress bar at the top...</p>
+        <div style="margin-top: 1400px;">
+            <p>End of page content</p>
+        </div>
+    </div>
+    
+    <script src="js/resume.js"></script>
+</body>
+</html>

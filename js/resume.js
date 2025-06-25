@@ -25,21 +25,52 @@
     target: '#sideNav'
   });
 
-  const progress = document.querySelector('.progress-done');
-
-  $(".progress-done").each(function(){
-    $(this).css("opacity","1")
-    $(this).css("width",$(this).data('done')+'%');
-  });
-
-
-  var docHeight = $(document).height(),
-  scrollPercent;
-
-  $(window).scroll(function() {
-    scrollPercent = ($(window).scrollTop() / docHeight) * 100;
-
-    $('.scroll-progress').width(scrollPercent + '%');
+  // Skills progress bar animation with intersection observer
+  function animateProgressBars() {
+    const progressBars = document.querySelectorAll('.progress-done');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progressBar = entry.target;
+          const percentage = progressBar.getAttribute('data-done');
+          
+          // Add a small delay for better visual effect
+          setTimeout(() => {
+            progressBar.style.opacity = '1';
+            progressBar.style.width = percentage + '%';
+          }, 200);
+          
+          // Stop observing once animated
+          observer.unobserve(progressBar);
+        }
+      });
+    }, {
+      threshold: 0.5,
+      rootMargin: '0px 0px -50px 0px'
     });
+
+    progressBars.forEach(bar => {
+      observer.observe(bar);
+    });
+  }
+
+  // Initialize progress bar animation
+  animateProgressBars();
+
+  // Scroll progress bar
+  function updateScrollProgress() {
+    const docHeight = $(document).height() - $(window).height();
+    const scrollTop = $(window).scrollTop();
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    
+    $('.scroll-progress').css('width', Math.min(scrollPercent, 100) + '%');
+  }
+
+  // Update scroll progress on scroll
+  $(window).on('scroll', updateScrollProgress);
+  
+  // Initialize scroll progress
+  updateScrollProgress();
 
 })(jQuery); // End of use strict
