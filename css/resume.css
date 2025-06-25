@@ -5,7 +5,9 @@
  */
 
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Muli', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
   padding-top: 54px;
 
   animation: fadeInAnimation ease 5s ;
@@ -40,6 +42,7 @@ h1 {
 
 h2 {
   font-size: 3.5rem;
+  margin-bottom: 15px !important;
 }
 
 h3 {
@@ -137,8 +140,7 @@ p.lead {
 }
 
 section.resume-section {
-  padding-top: 2rem !important;
-  padding-bottom: 2rem !important;
+  padding: 20px 15px;
   max-width: 75rem;
 }
 
@@ -195,8 +197,8 @@ a:hover, a:focus, a:active {
 }
 
 .progress-done {
-	background: linear-gradient(to left, #09294b, #FF9472);
-	box-shadow: 0 3px 3px -5px #09294b, 0 2px 5px #F2709C;
+	background: linear-gradient(to right, #007bff, #0056b3);
+	box-shadow: 0 3px 3px -5px #0056b3, 0 2px 5px #007bff;
 	border-radius: 30px;
 	color: #d5d5d5;
 	display: flex;
@@ -296,4 +298,91 @@ a:hover, a:focus, a:active {
   font-weight: bold;
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Reduced padding and margin for sections to minimize white space */
+.resume-section {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+/* Adjusted spacing for Education section */
+#education {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+/* Adjusted spacing for Projects section */
+#projects {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+/* General spacing adjustments for better compactness */
+.resume-item {
+  margin-bottom: 10px !important;
+}
+
+/* Modernized layout and improved responsiveness */
+body {
+  font-family: 'Muli', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.navbar {
+  background-color: #007bff;
+}
+
+.navbar-brand img {
+  border: 2px solid #007bff;
+}
+
+.resume-section {
+  padding: 20px 15px;
+}
+
+.resume-item {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #007bff;
+}
+
+h1 span.text-primary {
+  color: #0056b3;
+}
+
+.progress-done {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  box-shadow: 0 3px 3px -5px #0056b3, 0 2px 5px #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 15px 10px;
+  }
+
+  .navbar {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .resume-item {
+    margin-bottom: 15px;
+  }
 }
