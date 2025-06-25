@@ -651,6 +651,43 @@
   <!-- Custom scripts for this template -->
   <script src="js/resume.js"></script>
 
+  <!-- Added floating download button -->
+<div class="floating-download">
+  <a href="resume.pdf" download>
+    <i class="fas fa-download"></i>
+  </a>
+</div>
+
+<style>
+.floating-download {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.floating-download a {
+  color: white;
+  text-decoration: none;
+}
+
+.floating-download i {
+  font-size: 20px;
+}
+
+.floating-download:hover {
+  background-color: #0056b3;
+}
+</style>
 </body>
 
 </html>
